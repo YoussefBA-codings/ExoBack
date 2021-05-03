@@ -11,7 +11,7 @@ module.exports = (router) => {
       // #swagger.tags = ['users']
       try {
 		const token = req.headers.authorization.split(' ')[1]; 
-		let tokenInfo = tokens.filter(o => o.token.localeCompare(token) === 0);
+		let tokenInfo = tokens.filter(el => el[0]?.token.localeCompare(token) === 0);
 		if(tokenInfo.length === 0) {
 			tokenInfo.push({
 				token,
@@ -29,7 +29,7 @@ module.exports = (router) => {
 			justifiedText += wordArray[i] + ' ';
 			count += wordArray[i].length + 1;
 		} else {
-			justifiedText += '\n';
+			justifiedText += '\n' + wordArray[i] + ' ';
 			count = 0;
 		}
 		}
