@@ -1,3 +1,5 @@
+if faut créer un .env dans la racine du projet et rajouter private_key = secret
+
 Architecture du projet : 
 
 le dossier /middleware contient le middleware auth.js qui permettra de vérifier la validité du token envoyé par l'utilisateur.
