@@ -1,0 +1,14 @@
+Architecture du projet : 
+
+le dossier /middleware contient le middleware auth.js qui permettra de vérifier la validité du token envoyé par l'utilisateur.
+Si une route est précedée par un all(auth) cela veut dire que l'authentication sera requise.
+
+le dossier /router/routes contient l'ensemble des routes qui seront importées dans router/index.js afin de pouvoir les exporter ensuite.
+
+le fichiers utils.js contientla fonction WordCount qui permet de retourner le nombre de mots dans la string passée en paramétre, cette fonction sera utilisées dans test.routes.js
+
+tokens.js contient le tableaux qui permettra de stoquer les tokens, Cette solution nous evitera de passer par une base de données mais réelement les choses doivent se passer differement et une base de données sera obiligatoire.
+
+le .env est le fichier contenant les variables d'environement :
+Dans ce projet il y a une seule variable est c'est le private_key qui nous permettra de crypter les tokens lors de leurs creations.
+
